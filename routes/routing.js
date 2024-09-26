@@ -25,7 +25,7 @@ Router.get('/getDomaineByLibelle/:libelle', DomaineController.getByLibelle);
 Router.get('/getDomaineById/:id', Auth, DomaineController.getDomaineById);
 Router.post('/uptateDomaine', Auth, Telecharger, DomaineController.uptate)
 
-Router.post('/createUser', Telecharger, UserController.create);
+Router.post('/createUser',  Telecharger, UserController.create);
 Router.get('/getAllUsers', Auth, UserController.getAll);
 Router.get("/getUserById/:id", Auth, UserController.getById);
 Router.post("/updateUser", Auth, Telecharger, UserController.update);
@@ -47,7 +47,7 @@ Router.get('/getCommentLireJoint', Auth, commentaireContoller.getCommentLireJoin
 Router.post('/updateCommantaire', Auth, commentaireContoller.update);
 Router.get('/getAllInfoComment/:id', Auth, commentaireContoller.getAllInfoComment);
 
-Router.post('/create', Telecharger, Auth,  RaccourirController.create);
+Router.post('/create', Auth, Telecharger, RaccourirController.create);
 Router.post('/update', Auth, Telecharger, RaccourirController.update);
 Router.get('/getAll/:entite', RaccourirController.getAll);
 
